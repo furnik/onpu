@@ -20,8 +20,8 @@ export const useLanguage = () => {
 			setLang(value);
 		}
 		if (!value && !language) {
-			localStorage.setItem(key, t(defaultValue).toString());
-			setLang(t(defaultValue).toString);
+			localStorage.setItem(key, t(defaultValue));
+			setLang(String(t(defaultValue)));
 		}
 	};
 

@@ -21,6 +21,7 @@ const dateFnsLocales = {
 export enum NamespaceType {
 	footer = 'footer',
 	header = 'header',
+	main = 'main'
 }
 
 const fallbackLng = localeType.ua;
@@ -30,6 +31,7 @@ const ns = Object.values(NamespaceType);
 interface TranslationType {
 	[NamespaceType.footer]: ResourceKey;
 	[NamespaceType.header]: ResourceKey;
+	[NamespaceType.main]: ResourceKey;
 }
 
 type translationFileLoader = () => TranslationType;
@@ -50,6 +52,7 @@ const supportedLocales: SupportedLocalesType = {
 		translationFileLoader: (): TranslationType => ({
 			[NamespaceType.footer]: require('../translations/ua/footer.json'),
 			[NamespaceType.header]: require('../translations/ua/header.json'),
+			[NamespaceType.main]: require('../translations/ua/main.json'),
 		}),
 	},
 	[localeType.en]: {
@@ -57,6 +60,7 @@ const supportedLocales: SupportedLocalesType = {
 		translationFileLoader: (): TranslationType => ({
 			[NamespaceType.footer]: require('../translations/en/footer.json'),
 			[NamespaceType.header]: require('../translations/en/header.json'),
+			[NamespaceType.main]: require('../translations/en/main.json'),
 		}),
 	},
 };

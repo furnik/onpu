@@ -6,7 +6,7 @@ export type TText = {
   weight?: 'regular' | 'medium' | 'semi-bold';
   textAlign?: 'left' | 'center' | 'right';
   decoration?: 'underline';
-  color?: 'red' | 'black' | 'gray_1' | 'gray_7' | 'dark_2' | 'white';
+  color?: 'red' | 'black' | 'gray_1' | 'gray_7' | 'dark' | 'dark_2' | 'white';
 	size?: number;
   children?: React.ReactNode;
 };

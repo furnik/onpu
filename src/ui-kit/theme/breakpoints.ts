@@ -8,7 +8,7 @@ export enum Breakpoint {
   xxl = 1440,
 }
 
-const down = (bp: number) => `@media screen and (max-width: ${bp}px)`;
+const down = (bp: number) => `@media screen and (max-width: ${bp + 1}px)`;
 const up = (bp: number) => `@media screen and (min-width: ${bp}px)`;
 
 const Up = {

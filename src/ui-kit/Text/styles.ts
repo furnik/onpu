@@ -65,6 +65,8 @@ export const textColor = ({color}: TText) => {
 	switch (color) {
 	case 'red':
 		return theme.light.red;
+	case 'dark':
+		return theme.light.dark;
 	case 'dark_2':
 		return theme.light.dark_2;
 	case 'gray_1':
