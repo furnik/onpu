@@ -1,0 +1,13 @@
+{
+  "menu": {
+    "main": "Home",
+    "about": "About us",
+    "catalog": "Catalog",
+    "contacts": "Contacts",
+    "project": "Add a project"
+  },
+  "switcher": {
+    "ua": "ua",
+    "en": "en"
+  }
+}

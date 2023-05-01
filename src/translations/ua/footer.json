@@ -1,0 +1,26 @@
+{
+  "info": {
+    "title": "Одеський національний технологічний університет",
+    "address": "вул. Канатна, 112, м. Одеса, Україна, 65039",
+    "support": "Технічна піддтримка",
+    "email": "index@ontu.edu.ua",
+    "phone": "+38 (048) 712 4252"
+  },
+  "links": {
+    "about": "Про університет",
+    "program": "Програма навчання",
+    "admission": "Вступна кампанія",
+
+    "facebook": "Facebook",
+    "telegram": "Telegram",
+    "youtube": "YouTube",
+    "lib": "LibONTU_ScopusBot",
+
+    "ntb": "НТБ ОНТУ",
+    "ksi": "КЦВ ОНТУ",
+    "ontu": "ОНТУ",
+    "mon": "МОН України"
+  },
+  "copyright": "При використанні матеріалів сайту вказівка www.ontu.edu.ua обов´язкова.",
+  "created": "Created by Vladislav Belenko"
+}

@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Routes} from './containers/Routes';
+import {RecoilRoot} from 'recoil';
+import {theme} from './ui-kit/theme/palette';
+import {BrowserRouter} from 'react-router-dom';
+import {ThemeProvider} from 'styled-components';
+import {TranslateProvider} from './providers/withTranslate';
+import {GlobalStyles} from './styles';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export const App = () => {
+	return (
+		<RecoilRoot>
+			<TranslateProvider>
+				<BrowserRouter>
+					<ThemeProvider theme={theme.light}>
+						<GlobalStyles />
+						<Routes />
+					</ThemeProvider>
+				</BrowserRouter>
+			</TranslateProvider>
+		</RecoilRoot>
+	);
+};

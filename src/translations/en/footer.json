@@ -1,0 +1,26 @@
+{
+  "info": {
+    "title": "Odesa National Technological University",
+    "address": "112 Kanatna St., Odesa, Ukraine, 65039",
+    "support": "Technical support",
+    "email": "index@ontu.edu.ua",
+    "phone": "+38 (048) 712 4252"
+  },
+  "links": {
+    "about": "About the university",
+    "program": "Training program",
+    "admission": "Admission campaign",
+
+    "facebook": "Facebook",
+    "telegram": "Telegram",
+    "youtube": "YouTube",
+    "lib": "LibONTU_ScopusBot",
+
+    "ntb": "НТБ ONTU",
+    "ksi": "КЦВ ONTU",
+    "ontu": "ONTU",
+    "mon": "МОН Ukraine"
+  },
+  "copyright": "When using the materials of the site, the indication of www.ontu.edu.ua is required.",
+  "created": "Created by Vladislav Belenko"
+}
