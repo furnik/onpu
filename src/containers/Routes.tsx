@@ -7,7 +7,7 @@ export const Routes: React.FC = () => {
 	return (
 		<Switch>
 			<Route key="main" path={route.main.path} element={<MainContainer />} />
-			<Route key="all" path={route.all.path} element={<div>404</div>} />
+			<Route key="all" path={route.all.path} element={<MainContainer />} />
 		</Switch>
 	);
 };
