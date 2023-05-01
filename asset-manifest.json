@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/onpu/static/js/main.cf667c20.js",
+    "main.js": "/onpu/static/js/main.5c20d3f7.js",
     "static/js/787.d1d4a2c2.chunk.js": "/onpu/static/js/787.d1d4a2c2.chunk.js",
     "index.html": "/onpu/index.html",
-    "main.cf667c20.js.map": "/onpu/static/js/main.cf667c20.js.map",
+    "main.5c20d3f7.js.map": "/onpu/static/js/main.5c20d3f7.js.map",
     "787.d1d4a2c2.chunk.js.map": "/onpu/static/js/787.d1d4a2c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.cf667c20.js"
+    "static/js/main.5c20d3f7.js"
   ]
 }
