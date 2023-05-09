@@ -129,6 +129,8 @@ export const textColor = ({color}: TText) => {
 		return theme.light.black;
 	case 'blue_1':
 		return theme.light.blue_1;
+	case 'blue_6':
+		return theme.light.blue_6;
 	default:
 		return theme.light.black;
 	}

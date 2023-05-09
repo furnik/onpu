@@ -25,6 +25,7 @@ export enum NamespaceType {
 	about = 'about',
 	add = 'add',
 	catalog = 'catalog',
+	error = 'error'
 }
 
 const fallbackLng = localeType.ua;
@@ -38,6 +39,7 @@ interface TranslationType {
 	[NamespaceType.about]: ResourceKey;
 	[NamespaceType.add]: ResourceKey;
 	[NamespaceType.catalog]: ResourceKey;
+	[NamespaceType.error]: ResourceKey;
 }
 
 type translationFileLoader = () => TranslationType;
@@ -62,6 +64,7 @@ const supportedLocales: SupportedLocalesType = {
 			[NamespaceType.about]: require('../translations/ua/about.json'),
 			[NamespaceType.add]: require('../translations/ua/add.json'),
 			[NamespaceType.catalog]: require('../translations/ua/catalog.json'),
+			[NamespaceType.error]: require('../translations/ua/error.json'),
 		}),
 	},
 	[localeType.en]: {
@@ -73,6 +76,7 @@ const supportedLocales: SupportedLocalesType = {
 			[NamespaceType.about]: require('../translations/en/about.json'),
 			[NamespaceType.add]: require('../translations/en/add.json'),
 			[NamespaceType.catalog]: require('../translations/en/catalog.json'),
+			[NamespaceType.error]: require('../translations/en/error.json'),
 		}),
 	},
 };
