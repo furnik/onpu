@@ -21,7 +21,10 @@ const dateFnsLocales = {
 export enum NamespaceType {
 	footer = 'footer',
 	header = 'header',
-	main = 'main'
+	main = 'main',
+	about = 'about',
+	add = 'add',
+	catalog = 'catalog',
 }
 
 const fallbackLng = localeType.ua;
@@ -32,6 +35,9 @@ interface TranslationType {
 	[NamespaceType.footer]: ResourceKey;
 	[NamespaceType.header]: ResourceKey;
 	[NamespaceType.main]: ResourceKey;
+	[NamespaceType.about]: ResourceKey;
+	[NamespaceType.add]: ResourceKey;
+	[NamespaceType.catalog]: ResourceKey;
 }
 
 type translationFileLoader = () => TranslationType;
@@ -53,6 +59,9 @@ const supportedLocales: SupportedLocalesType = {
 			[NamespaceType.footer]: require('../translations/ua/footer.json'),
 			[NamespaceType.header]: require('../translations/ua/header.json'),
 			[NamespaceType.main]: require('../translations/ua/main.json'),
+			[NamespaceType.about]: require('../translations/ua/about.json'),
+			[NamespaceType.add]: require('../translations/ua/add.json'),
+			[NamespaceType.catalog]: require('../translations/ua/catalog.json'),
 		}),
 	},
 	[localeType.en]: {
@@ -61,6 +70,9 @@ const supportedLocales: SupportedLocalesType = {
 			[NamespaceType.footer]: require('../translations/en/footer.json'),
 			[NamespaceType.header]: require('../translations/en/header.json'),
 			[NamespaceType.main]: require('../translations/en/main.json'),
+			[NamespaceType.about]: require('../translations/en/about.json'),
+			[NamespaceType.add]: require('../translations/en/add.json'),
+			[NamespaceType.catalog]: require('../translations/en/catalog.json'),
 		}),
 	},
 };

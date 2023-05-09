@@ -39,14 +39,14 @@ export const DefaultButton = styled.button`
 export const Label = styled.div`
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 100%;
   position: relative;
 `;
 
 export const DefaultLabel = styled.div`
   display: flex;
   flex-direction: column;
-  width: 360px;
+  width: 100%;
   position: relative;
 `;
 
@@ -79,7 +79,7 @@ export const DefaultListWrapper = styled.div`
   box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
   border-radius: 8px;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 340px;
   position: absolute;
   z-index: 3;

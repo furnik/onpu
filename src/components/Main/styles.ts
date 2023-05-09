@@ -17,7 +17,7 @@ export const ContentWrapper = styled.section`
   flex-wrap: nowrap;
   gap: 16px;
   width: 100%;
-  ${Media.down.xxs} {
+  ${Media.down.s} {
     flex-direction: column;
     gap: 40px;
   }
@@ -64,7 +64,7 @@ export const Frame = styled.img`
     width: 50%;
     max-width: 344px;
   }
-  ${Media.down.xxs} {
+  ${Media.down.s} {
     width: 100%;
     max-width: 100%;
   }

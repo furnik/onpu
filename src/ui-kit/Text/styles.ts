@@ -1,10 +1,60 @@
 import styled, {css} from 'styled-components';
 import {TText} from './index';
 import {theme} from '../theme/palette';
+import {Media} from '../theme/breakpoints';
 
-export const fontSizeDesktop = ({variant, size}: TText) => {
-	if (size) {
-		return size + 'px';
+export const fontSizeDesktop = ({variant, sizeD}: TText) => {
+	if (sizeD) {
+		return sizeD + 'px';
+	}
+	switch (variant) {
+	case 'h1':
+		return '60px';
+	case 'h2':
+		return '36px';
+	case 'h3':
+		return '20px';
+	case 'h4':
+		return '18px';
+	case 'h5':
+		return '16px';
+	default:
+		return '14px';
+	}
+};
+
+export const fontSizeTablet = ({variant, sizeT, sizeD}: TText) => {
+	if (sizeT) {
+		return sizeT + 'px';
+	}
+	if (sizeD) {
+		return sizeD + 'px';
+	}
+	switch (variant) {
+	case 'h1':
+		return '60px';
+	case 'h2':
+		return '36px';
+	case 'h3':
+		return '20px';
+	case 'h4':
+		return '18px';
+	case 'h5':
+		return '16px';
+	default:
+		return '14px';
+	}
+};
+
+export const fontSizeMobile = ({variant, sizeM, sizeT, sizeD}: TText) => {
+	if (sizeM) {
+		return sizeM + 'px';
+	}
+	if (sizeT) {
+		return sizeT + 'px';
+	}
+	if (sizeD) {
+		return sizeD + 'px';
 	}
 	switch (variant) {
 	case 'h1':
@@ -77,6 +127,8 @@ export const textColor = ({color}: TText) => {
 		return theme.light.white;
 	case 'black':
 		return theme.light.black;
+	case 'blue_1':
+		return theme.light.blue_1;
 	default:
 		return theme.light.black;
 	}
@@ -90,6 +142,12 @@ const styles = css`
   line-height: 150%;
   color: ${textColor};
 	text-decoration: ${textDecoration};
+	${Media.down.m} {
+		font-size: ${fontSizeTablet};
+	}
+	${Media.down.xxs} {
+		font-size: ${fontSizeMobile};
+	}
 `;
 
 export const H1 = styled.h1<TText>`

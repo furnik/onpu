@@ -1,0 +1,16 @@
+{
+  "mainInfo": {
+    "ontu": "ONTU",
+    "title": "About us",
+    "description": "Odesa National Technical University (ONTU) is a leading university in Ukraine with a long history of development in the field of information technology. The university is actively working on the development of new programs and technologies that provide students with high quality education and allow them to become highly qualified specialists in this field."
+  },
+  "info": {
+    "universityTitle": "Information about the university",
+    "universityDescription": "To find out more information about ONTU go to the main page",
+    "more": "Learn more",
+    "developTitle": "Information about digital developments",
+    "developDescription": "Information resources and software products, automated systems, digital communications, and innovative gadgets have rapidly penetrated our everyday life and social life, medicine, science, education, public administration, and the economy at all levels.",
+    "missionTitle": "Mission and goals of the resource",
+    "missionDescription": "Creation of a convenient navigator for information developments of ONTU in various IT fields and for different specialties of the university"
+  }
+}

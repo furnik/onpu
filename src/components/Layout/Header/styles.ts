@@ -36,7 +36,7 @@ export const MenuWrapper = styled.article`
     justify-content: space-between;
     width: 100%;
   }
-  ${Media.down.xxs} {
+  ${Media.down.s} {
     display: none;
   }
 `;

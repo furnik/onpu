@@ -56,6 +56,7 @@ const styles = css`
   border: ${border};
   cursor: pointer;
   width: ${width};
+	min-width: ${width};
   height: ${height};
   border-radius: 8px;
   transition: 0.3s;
@@ -68,4 +69,13 @@ const styles = css`
 
 export const StyledBtn = styled.button<TBtn>`
   ${styles};
+`;
+
+export const StyledCloseBtn = styled.button`
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 `;

@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
 				</ContentWrapper>
 				<CopyrightWrapper>
 					<Typography variant="h6" weight="regular" color="white">Copyright © 1998-{year} by ONTU. {t('footer:copyright')}</Typography>
-					<Typography size={12} weight="regular" color="gray_7">{t('footer:created')}</Typography>
+					<Typography sizeD={12} weight="regular" color="gray_7">{t('footer:created')}</Typography>
 				</CopyrightWrapper>
 			</Container>
 		</Wrapper>

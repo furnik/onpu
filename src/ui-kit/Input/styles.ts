@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {Typography} from '../Text';
 
 export const StyledInput = styled.input<{$error: boolean}>`
-  width: 320px;
+  width: 100%;
   height: 44px;
   border-radius: 8px;
   background-color: ${(props) => props.theme.white};
@@ -25,7 +25,7 @@ export const StyledInput = styled.input<{$error: boolean}>`
 `;
 
 export const SearchStyledInput = styled.input`
-  width: 460px;
+  width: 100%;
   height: 48px;
   border-radius: 8px;
   background-color: ${(props) => props.theme.white};
@@ -57,13 +57,12 @@ export const Label = styled.label`
 export const SearchLabel = styled.div`
   display: flex;
   flex-direction: column;
-  width: max-content;
   position: relative;
+  width: 100%;
   & > svg {
     position: absolute;
-    top: 50%;
     left: 16px;
-    transform: translateY(-50%);
+    top: calc(50% - 10px);
   }
 `;
 
@@ -72,15 +71,9 @@ export const ErrorText = styled(Typography).attrs({color: 'red', variant: 'h6'})
   bottom: -20px;
 `;
 
-export const CloseBtn = styled.button`
-  width: 24px;
-  height: 24px;
-  padding: 0;
+export const CloseBtnWrapper = styled.div`
   position: absolute;
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  cursor: pointer;
 `;

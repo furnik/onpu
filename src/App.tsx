@@ -7,12 +7,14 @@ import {ThemeProvider} from 'styled-components';
 import {TranslateProvider} from './providers/withTranslate';
 import {GlobalStyles} from './styles';
 
+type ThemeType = typeof theme.light;
+
 export const App = () => {
 	return (
 		<RecoilRoot>
 			<TranslateProvider>
 				<BrowserRouter>
-					<ThemeProvider theme={theme.light}>
+					<ThemeProvider theme={theme.light as ThemeType}>
 						<GlobalStyles />
 						<Routes />
 					</ThemeProvider>

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import {Layout} from '../Layout';
 import {Wrapper, ContentWrapper, InfoWrapper, ButtonWrapper, Frame} from './styles';
 import {Container} from '../../ui-kit/Container';
 import {Typography} from '../../ui-kit/Text';
 import {useTranslation} from 'react-i18next';
 import {Button} from '../../ui-kit/Button';
-import frame from './assets/Frame.png';
+import frame from './assets/frame.webp';
 
-export const Main: React.FC = () => {
+export const Main: React.FC<PropsWithChildren> = ({children}) => {
 	const {t} = useTranslation();
 	return (
 		<Layout>
@@ -22,10 +22,11 @@ export const Main: React.FC = () => {
 								<Button variant="secondary">{t('main:info.secondaryBtn')}</Button>
 							</ButtonWrapper>
 						</InfoWrapper>
-						<Frame src={frame} />
+						<Frame src={frame} alt="banner" />
 					</ContentWrapper>
 				</Container>
 			</Wrapper>
+			{children}
 		</Layout>
 	);
 };

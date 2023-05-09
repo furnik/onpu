@@ -1,0 +1,15 @@
+{
+  "title": "Catalog of digital developments",
+  "result": "Found {{number}} results",
+  "search": "Search",
+  "type": "Application type",
+  "year": "Years of development",
+  "specialty": "Specialties",
+  "clear": "Reset all",
+  "card": {
+    "year": "Year",
+    "author": "Author(s)",
+    "manager": "Leader(s)",
+    "type": "Type"
+  }
+}

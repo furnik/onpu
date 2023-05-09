@@ -27,7 +27,7 @@ export const Select: React.FC<Props> = ({placeholder, onChange, values}) => {
 			{active && <ListWrapper>
 				<List>
 					{values.map((item, index) => <ListItem key={index}>
-						<Checkbox onChange={() => console.log('ckec')} value={false} />
+						<Checkbox onChange={() => console.log('c')} value={false} />
 						<Typography variant="h5" weight="medium" color="dark_2">{item}</Typography>
 					</ListItem>)}
 				</List>
