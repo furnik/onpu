@@ -1,29 +1,31 @@
-import React, {MouseEventHandler, useCallback} from 'react';
+import React from 'react';
 import {Wrapper, ContentWrapper, MenuWrapper, MenuItem} from './styles';
 import {Container} from '../../../ui-kit/Container';
 import {Link} from 'react-router-dom';
 import {route} from '../../../constants/route';
 import {useTranslation} from 'react-i18next';
 import {Switcher} from './Switcher';
+import {ScrollButton} from '../../../ui-kit/Button/ScrollButton';
 
-const links = [{text: 'header:menu.main', link: ''}, {text: 'header:menu.about', link: ''}, {text: 'header:menu.catalog', link: ''}, {text: 'header:menu.contacts', link: ''}, {text: 'header:menu.project', link: ''}];
+//Основна інформація додатку
+
+const links = [{text: 'header:menu.main', link: '/#main'}, {text: 'header:menu.about', link: '/#about'}, {text: 'header:menu.catalog', link: '/#catalog'}, {text: 'header:menu.contacts', link: '/#footer'}, {text: 'header:menu.project', link: '/#add'}];
+
+//Компонент верхньої навігації додатку
 
 export const Header: React.FC = () => {
 	const {t} = useTranslation();
 
-	const onMenuClickHandler: MouseEventHandler<HTMLAnchorElement> = useCallback((event) => {
-		event.preventDefault();
-	}, []);
-
 	return (
 		<Wrapper>
 			<Container $direction="row">
+				<ScrollButton />
 				<ContentWrapper>
 					<Link to={route.main.path}>
 						<LogoIcon />
 					</Link>
 					<MenuWrapper>
-						{links.map((link, index) => <MenuItem onClick={onMenuClickHandler} key={index} href={link.link}>{t(link.text)}</MenuItem>)}
+						{links.map((link, index) => <MenuItem key={index} to={link.link}>{t(link.text)}</MenuItem>)}
 					</MenuWrapper>
 					<Switcher />
 				</ContentWrapper>

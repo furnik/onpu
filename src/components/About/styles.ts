@@ -27,21 +27,8 @@ export const ContentWrapper = styled.article`
 
 export const InfoWrapper = styled.div`
   width: 50%;
-  height: 100%;
-  max-height: 426px;
-  overflow-y: auto;
-  transform: scaleX(-1);
+  height: max-content;
   padding: 16px 24px 16px 0;
-  ::-webkit-scrollbar {
-    width: 4px;
-  }
-  ::-webkit-scrollbar-track {
-    background: ${(props) => props.theme.blue_2};
-  }
-  ::-webkit-scrollbar-thumb {
-    background: ${(props) => props.theme.blue_1};
-    border-radius: 4px;
-  }
   ${Media.down.m}{
     width: 100%;
   }
@@ -50,16 +37,16 @@ export const InfoWrapper = styled.div`
 export const InfoReverse = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 32px;
   width: 100%;
   height: 100%;
-  transform: scaleX(-1);
 `;
 
-export const InfoBlock = styled.div`
+export const InfoBlock = styled.div<{$active?: boolean}>`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 16px 0 16px 24px;
+  border-left: 4px solid ${({$active, theme}) => ($active ? theme.blue_1 : theme.blue_2)};
 `;
 
 export const InfoBanner = styled.img`

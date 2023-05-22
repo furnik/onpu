@@ -90,7 +90,7 @@ export const Line = styled.div<{top?: number}>`
   margin-top: ${({top}) => (top ? top + 'px' : 0)};
 `;
 
-export const SpecialtyList = styled.ul`
+export const SpecialityList = styled.ul`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -113,7 +113,7 @@ export const SpecialtyList = styled.ul`
   }
 `;
 
-export const SpecialtyItem = styled.li`
+export const SpecialityItem = styled.li`
   width: 100%;
   align-items: flex-start;
   display: flex;

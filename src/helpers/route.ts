@@ -10,6 +10,8 @@ enum IsRoute {
   __brand = 'Route',
 }
 
+//Функція для полегшення роботи з роутингом
+
 export class Route<T extends anyObject> {
 	private readonly $isRoute?: IsRoute;
 	private readonly $searchKeys: Record<string, boolean>;

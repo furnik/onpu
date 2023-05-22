@@ -6,6 +6,8 @@ import {useTranslation} from 'react-i18next';
 const defaultValue = 'header:switcher.ua';
 const key = 'language';
 
+//Хук для зміни мови додвтку
+
 export const useLanguage = () => {
 	const {t} = useTranslation();
 	const [language, setLang] = useRecoilState(languageState);

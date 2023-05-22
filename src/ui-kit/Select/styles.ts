@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import {Typography} from '../Text';
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<{$error: boolean}>`
   width: 100%;
   height: 48px;
   border-radius: 8px;
   background-color: ${(props) => props.theme.white};
-  border: 1px solid ${(props) => props.theme.gray_2};
+  border: 1px solid ${({theme, $error}) => ($error ? theme.red : theme.gray_2)};
   color: ${(props) => props.theme.gray_1};
   padding: 0 14px;
   font-family: Inter, sans-serif;
@@ -57,7 +58,7 @@ export const ListWrapper = styled.div`
   border-radius: 8px;
   width: 100%;
   padding: 12px;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 340px;
   position: absolute;
   z-index: 3;
@@ -104,14 +105,30 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    background: ${(props) => props.theme.blue_9};
+  }
+`;
+
+export const GhostButton = styled.button`
+  background: none;
+  border: none;
   display: flex;
   align-items: center;
   gap: 8px;
   width: 100%;
   height: 44px;
-  padding: 0 10px;
-  transition: 0.3s;
-  &:hover {
-    background: ${(props) => props.theme.blue_9};
-  }
+`;
+
+export const ErrorText = styled(Typography).attrs({color: 'red', variant: 'h6'})`
+  position: absolute;
+  bottom: -20px;
 `;

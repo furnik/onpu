@@ -1,0 +1,24 @@
+{
+  "types": "Types",
+  "tags": "Technologies",
+  "specialities": "Specialities",
+  "projects": "Projects",
+  "button": {
+    "create": "Create",
+    "update": "Update",
+    "delete": "Delete",
+    "submit": "Send",
+    "approve": "Approve",
+    "reject": "Reject"
+  },
+  "auth": {
+    "username": "Username",
+    "password": "Password",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "repeatPassword": "Repeat password",
+    "login": "Login",
+    "change": "Change password"
+  },
+  "error": "Input current data"
+}

@@ -4,13 +4,21 @@ import {TProject} from '../../../types/project';
 import {Typography} from '../../../ui-kit/Text';
 import {useTranslation} from 'react-i18next';
 import {Label} from '../../../ui-kit/Label';
+import {useRecoilValue} from 'recoil';
+import {languageState} from '../../../store/language';
+import {Languages} from '../../../constants/translate';
 
-export const Card: React.FC<TProject> = ({specialties, title, description, authors, managers, types, tags, link, year}) => {
+//Компонент картки проєкту
+
+export const Card: React.FC<TProject> = (project) => {
 	const {t} = useTranslation();
+	const language = useRecoilValue(languageState);
+	const {title, description, specialities, link, year, managers, types, tags, authors} = language === Languages.ua ? project.ua : project.en;
+	const siteName = new URL(link).host;
 	return (
 		<CardWrapper>
 			<RowWrapper gap={10}>
-				{specialties.map((specialty) => <Typography key={specialty} variant="h6" color="gray_1">{specialty}</Typography>)}
+				{specialities.map((speciality) => <Typography key={speciality} variant="h6" color="gray_1">{speciality}</Typography>)}
 			</RowWrapper>
 			<Typography variant="h4" weight="medium" color="dark">{title}</Typography>
 			<Typography variant="h5" color="gray_1">{description}</Typography>
@@ -30,7 +38,7 @@ export const Card: React.FC<TProject> = ({specialties, title, description, autho
 				{tags.map((tag) => <Label key={tag} content={tag} />)}
 			</RowWrapper>
 			<FooterWrapper>
-				<Link target="_blank" href={link.url}>{link.name}</Link>
+				<Link target="_blank" href={link}>{siteName}</Link>
 				<Typography variant="h5" color="gray_1">{t('catalog:card.year')} {year}</Typography>
 			</FooterWrapper>
 		</CardWrapper>

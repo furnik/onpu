@@ -2,9 +2,11 @@ import React from 'react';
 import {Layout} from '../Layout';
 import {Container} from '../../ui-kit/Container';
 import {Wrapper, Image, InfoWrapper, ContentWrapper} from './styles';
-import frame from './assets/Illustration.png';
+import frame from './assets/Illustration.webp';
 import {Typography} from '../../ui-kit/Text';
 import {useTranslation} from 'react-i18next';
+
+//Сторінка 404 помилки
 
 export const Error404: React.FC = () => {
 	const {t} = useTranslation();

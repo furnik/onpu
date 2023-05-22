@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Media} from '../../../ui-kit/theme/breakpoints';
+import {Link} from 'react-router-dom';
 
 export const Wrapper = styled.header`
   display: flex;
@@ -41,7 +42,7 @@ export const MenuWrapper = styled.article`
   }
 `;
 
-export const MenuItem = styled.a`
+export const MenuItem = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.black};
   font-size: 16px;

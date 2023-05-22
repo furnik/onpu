@@ -8,6 +8,8 @@ enum Languages {
 	en = 'header:switcher.en',
 }
 
+//Компонент переключання мови додатку
+
 export const Switcher: React.FC = () => {
 	const {t} = useTranslation();
 	const {language, changeLanguageHandler} = useLanguage();

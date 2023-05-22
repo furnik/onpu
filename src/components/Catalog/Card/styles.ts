@@ -7,6 +7,7 @@ export const CardWrapper = styled.li`
   padding: 20px;
   background: ${(props) => props.theme.white};
   border-radius: 8px;
+  width: 100%;
 `;
 
 export const RowWrapper = styled.div<{gap: number}>`

@@ -4,12 +4,16 @@
   "search": "Search",
   "type": "Application type",
   "year": "Years of development",
-  "specialty": "Specialties",
+  "speciality": "Specialties",
   "clear": "Reset all",
   "card": {
     "year": "Year",
     "author": "Author(s)",
     "manager": "Leader(s)",
     "type": "Type"
+  },
+  "nodata": {
+    "title": "Project not found",
+    "description": "No projects were found for your request. Please try again."
   }
 }

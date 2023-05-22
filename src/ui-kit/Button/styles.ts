@@ -69,6 +69,16 @@ const styles = css`
 
 export const StyledBtn = styled.button<TBtn>`
   ${styles};
+	position: relative;
+	a {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
 `;
 
 export const StyledCloseBtn = styled.button`
@@ -78,4 +88,25 @@ export const StyledCloseBtn = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
+`;
+
+export const TopButton = styled.button<{isShow?: boolean}>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background: ${({theme}) => theme.white};
+	box-shadow: 0 4px 10px rgba(129, 129, 129, 0.25);
+
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 11;
+  cursor: pointer;
+  opacity: ${({isShow}) => (isShow ? 1 : 0)};
+  transition: opacity 0.5s;
 `;

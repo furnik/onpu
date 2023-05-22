@@ -4,32 +4,36 @@ import {Container} from '../../../ui-kit/Container';
 import {Typography} from '../../../ui-kit/Text';
 import {useTranslation} from 'react-i18next';
 
+//Основна інформація с блоку "Контактів"
+
 const links = [
 	[
-		{text: 'footer:links.about', link: ''},
-		{text: 'footer:links.program', link: ''},
-		{text: 'footer:links.admission', link: ''}
+		{text: 'footer:links.about', link: 'https://ontu.edu.ua/chair'},
+		{text: 'footer:links.program', link: 'https://ontu.edu.ua/chair'},
+		{text: 'footer:links.admission', link: 'https://ontu.edu.ua/chair'}
 	],
 	[
-		{text: 'footer:links.facebook', link: ''},
-		{text: 'footer:links.telegram', link: ''},
-		{text: 'footer:links.lib', link: ''},
-		{text: 'footer:links.youtube', link: ''}
+		{text: 'footer:links.facebook', link: 'https://www.facebook.com/BibliONTU'},
+		{text: 'footer:links.telegram', link: 'https://t.me/LibONTU'},
+		{text: 'footer:links.lib', link: 'https://t.me/ISSN_Bot'},
+		{text: 'footer:links.youtube', link: 'https://www.youtube.com/c/Need2KnowONTU'}
 	],
 	[
-		{text: 'footer:links.ntb', link: ''},
-		{text: 'footer:links.ksi', link: ''},
-		{text: 'footer:links.ontu', link: ''},
-		{text: 'footer:links.mon', link: ''}
+		{text: 'footer:links.ntb', link: 'https://library.ontu.edu.ua/'},
+		{text: 'footer:links.ksi', link: 'https://kci.ontu.edu.ua/'},
+		{text: 'footer:links.ontu', link: 'https://www.ontu.edu.ua/'},
+		{text: 'footer:links.mon', link: 'https://mon.gov.ua/ua'}
 	]
 ];
 
 const year = new Date().getFullYear();
 
+//Компонент блоку "Контаків"
+
 export const Footer: React.FC = () => {
 	const {t} = useTranslation();
 	return (
-		<Wrapper>
+		<Wrapper id="footer">
 			<Container $direction="column">
 				<ContentWrapper>
 					<InfoWrapper>

@@ -6,20 +6,21 @@ import {BrowserRouter} from 'react-router-dom';
 import {ThemeProvider} from 'styled-components';
 import {TranslateProvider} from './providers/withTranslate';
 import {GlobalStyles} from './styles';
-
-type ThemeType = typeof theme.light;
+import {ApolloProvider} from './providers/withApollo';
 
 export const App = () => {
 	return (
-		<RecoilRoot>
-			<TranslateProvider>
-				<BrowserRouter>
-					<ThemeProvider theme={theme.light as ThemeType}>
-						<GlobalStyles />
-						<Routes />
-					</ThemeProvider>
-				</BrowserRouter>
-			</TranslateProvider>
-		</RecoilRoot>
+		<ApolloProvider>
+			<RecoilRoot>
+				<TranslateProvider>
+					<BrowserRouter>
+						<ThemeProvider theme={theme.light}>
+							<GlobalStyles />
+							<Routes />
+						</ThemeProvider>
+					</BrowserRouter>
+				</TranslateProvider>
+			</RecoilRoot>
+		</ApolloProvider>
 	);
 };

@@ -1,5 +1,26 @@
 {
   "title": "Add your development",
   "description": "To reproduce your work on the platform, fill out the form.",
-  "button": "Go to the form"
+  "button": "Go to the form",
+  "form": {
+    "formTitle": "Fill out the form",
+    "formDescription": "To add a project, first fill out the form in one language, switch to another language, and then click \"Add project\"",
+    "title": "Title",
+    "description": "Description",
+    "author": "Author",
+    "addAuthor": "Add author",
+    "manager": "Manager",
+    "addManager": "Add a manager",
+    "year": "Year of development",
+    "type": "Application type",
+    "speciality": "Speciality",
+    "technology": "Development technologies used",
+    "link": "Insert a link to a project or document",
+    "symbols": "Remaining characters",
+    "add": "Add project"
+  },
+  "error": {
+    "input": "Input current data EN/UA",
+    "select": "Choose at least one item EN/UA"
+  }
 }

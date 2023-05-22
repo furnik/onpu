@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Media} from '../../ui-kit/theme/breakpoints';
 
 export const Wrapper = styled.section`
   display: flex;
@@ -12,4 +13,22 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
+`;
+
+export const NoDataWrapper = styled.div<{$ua: boolean}>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 100px;
+  width: 100%;
+  svg {
+    margin-bottom: 12px;
+  }
+  h6 {
+    max-width: ${({$ua}) => ($ua ? '350px' : 'max-content')};
+  }
+  ${Media.down.m} {
+    margin-top: 40px;
+  }
 `;

@@ -25,7 +25,8 @@ export enum NamespaceType {
 	about = 'about',
 	add = 'add',
 	catalog = 'catalog',
-	error = 'error'
+	error = 'error',
+	admin = 'admin'
 }
 
 const fallbackLng = localeType.ua;
@@ -40,6 +41,7 @@ interface TranslationType {
 	[NamespaceType.add]: ResourceKey;
 	[NamespaceType.catalog]: ResourceKey;
 	[NamespaceType.error]: ResourceKey;
+	[NamespaceType.admin]: ResourceKey;
 }
 
 type translationFileLoader = () => TranslationType;
@@ -65,6 +67,7 @@ const supportedLocales: SupportedLocalesType = {
 			[NamespaceType.add]: require('../translations/ua/add.json'),
 			[NamespaceType.catalog]: require('../translations/ua/catalog.json'),
 			[NamespaceType.error]: require('../translations/ua/error.json'),
+			[NamespaceType.admin]: require('../translations/ua/admin.json'),
 		}),
 	},
 	[localeType.en]: {
@@ -77,6 +80,7 @@ const supportedLocales: SupportedLocalesType = {
 			[NamespaceType.add]: require('../translations/en/add.json'),
 			[NamespaceType.catalog]: require('../translations/en/catalog.json'),
 			[NamespaceType.error]: require('../translations/en/error.json'),
+			[NamespaceType.admin]: require('../translations/en/admin.json'),
 		}),
 	},
 };
@@ -108,6 +112,8 @@ const translationLoader: BackendModule = {
 		callback(error, resource);
 	},
 };
+
+//Провайдер для взаємодії с перекладами
 
 export const TranslateProvider: React.FC<PropsWithChildren> = ({children}) => {
 	const [isInit, setInit] = useState<boolean>(false);
