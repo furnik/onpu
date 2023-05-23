@@ -75,6 +75,7 @@ export const ListItem = styled.li`
 export const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
+flex-wrap: wrap;
   gap: 10px;
   ${Media.down.m} {
     width: 100%;
@@ -113,6 +114,7 @@ export const FixedWrapper = styled.article`
   left: 0;
   background: ${(props) => props.theme.dark_4};
   backdrop-filter: blur(8px);
+  z-index: 100;
 `;
 
 export const FormWrapper = styled.div`
